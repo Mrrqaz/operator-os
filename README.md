@@ -10,6 +10,51 @@ This repo is proof of that, not a claim of it. It's the actual operating system 
 
 If you're hiring for a Chief of Staff, Founder's Associate, or Founding Operator role, this is the closest thing I have to "here's how I'd show up in week one."
 
+## System map
+
+Every skill reads and writes the same shared memory layer, and nothing produced here reaches a stakeholder without a human approval step. That gate is the point, not an afterthought bolted on:
+
+```mermaid
+flowchart TD
+    subgraph Daily["Daily Operating"]
+        MB[morning-briefing]
+        IT[inbox-triage]
+        MP[meeting-prep]
+    end
+
+    subgraph Memory["Relationships and Memory"]
+        RCRM[relationship-crm]
+        DL[decision-log]
+    end
+
+    subgraph Strategy["Strategy and Reporting"]
+        OKR[okr-kpi-tracker]
+        SPR[special-project-runner]
+        RB[research-brief]
+        SU[stakeholder-update]
+        IC[internal-comms]
+    end
+
+    WR[weekly-review]
+    CTX[("context/ — people, decisions-log, goals")]
+    GATE{{"Founder / exec approval"}}
+
+    MB --> CTX
+    IT --> CTX
+    MP --> CTX
+    RCRM --> CTX
+    DL --> CTX
+    OKR --> CTX
+    SPR --> CTX
+    RB --> CTX
+    SU --> CTX
+    IC --> CTX
+    WR -->|Friday synthesis, reads everything| CTX
+
+    CTX --> GATE
+    GATE --> SEND["Sends, decks, updates, decisions"]
+```
+
 ## What's inside
 
 A Claude Code project: a `CLAUDE.md` identity file, a `context/` layer for goals, people, and decisions, and 11 skills that do the actual work.
