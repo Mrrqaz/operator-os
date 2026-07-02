@@ -24,7 +24,7 @@ Match the request to one of the six types below. If it's ambiguous ("write an up
 
 ## Step 2: Confirm the company's format convention
 
-Read `context/role-target.md`. If it states a house style (a specific 3P cadence, a newsletter template, a preferred incident-report structure), use that over the defaults below. If it's silent, ask what convention this company already uses before drafting. This skill writes in the format the company has, not one I'm importing from somewhere else.
+Read `context/role-target.md`'s "Company voice / format conventions" field. If it states a house style (a specific 3P cadence, a newsletter template, a preferred incident-report structure), use that over the defaults below. If it's blank, ask what convention this company already uses before drafting. This skill writes in the format the company has, not one I'm importing from somewhere else.
 
 ## Step 3: Pull source material
 

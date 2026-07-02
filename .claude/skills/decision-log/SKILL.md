@@ -18,6 +18,7 @@ The part that makes this more than a running list: before anything new gets writ
 - **The one exception is the Status line.** Status is allowed to move forward in place (e.g. `Open` -> `Closed, delivered 2026-06-24`) because it's tracking the same decision's lifecycle, not rewriting the reasoning. If the decision itself changes, gets reversed, or the reasoning shifts, that's not a status update, that's a new entry (see Step 5).
 - **Never write a fresh entry without searching first.** Step 2 is mandatory, not optional, even when the topic looks brand new. Skipping it is exactly how a decision gets quietly re-made without anyone noticing it contradicts an earlier one.
 - **Not every choice belongs here.** This log is for material decisions, not routine execution. See Step 1 for the bar.
+- **Closing a decision that names a stakeholder means checking their file too, not just this one.** A decision here and a person's Open items in `context/people/` describe the same real-world commitment from two angles. If they drift (one says closed, the other still lists it as waiting), that's a memory-hygiene gap the founder shouldn't have to catch by cross-reading both files. See Step 4.
 
 ## Intended Integrations
 
@@ -84,6 +85,8 @@ Format, inserted at the top of the log (directly under the intro note, above the
 ```
 
 Use today's date. Keep the title short enough to scan in a list of ten entries. Don't touch anything below it.
+
+**Cross-check the Owner's people file.** If the entry's Owner (or anyone else named in Decision/Why) has a matching Open item in `context/people/`, that's the same commitment tracked in two places. When this new entry closes or moves that decision forward, check whether the matching Open item needs the same update: strike it through and append the resolution date, per `relationship-crm`'s convention, rather than leaving it open in one file while this log calls it closed. Flag it to the user if you're updating both, don't do it silently, and don't skip this check just because the decisions-log entry itself is done.
 
 ## Step 5: When a Decision Changes
 
@@ -170,3 +173,4 @@ Leave Decision, Why, and Owner exactly as written.
 - Every entry needs a real Owner, or an explicit "TBD" flagged to the user, never a guess.
 - When retrieving history, cite the entry. Don't reconstruct reasoning from memory.
 - If you're not sure whether something is material enough to log, log it anyway, the cost of a short unneeded entry is near zero.
+- When a decision names a stakeholder who also has a matching Open item in `context/people/`, closing or updating the decision here means checking whether that Open item needs to close too. A decision marked Closed here and the same ask still sitting open in a person's file is a gap, not two independent records.

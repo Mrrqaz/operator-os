@@ -8,7 +8,7 @@ user_invocable: true
 
 This is the company-wide goal-setting and metrics half of the job: turn a quarter's priorities into real objectives and key results, decompose each key result into the handful of metrics that actually move it, then keep that whole structure honest so nothing drifts unnoticed. A markdown table is the dashboard. This is a Claude Code repo, not a BI product, don't build more than the job needs.
 
-The three-stage shape here (objective/key-result setting, then metric decomposition, then measurement and drift) follows the pattern used by the OKR Builder, Metric Tree Builder, and Metrics Framework skills in `mohitagw15856/pm-claude-skills` (1.1k stars, eval-scored ~4.8/5 average across 208 evaluated skills, the strongest credibility signal found researching this space). None of those are tool-connected, they're pure framework logic. This skill borrows the structure and wires it to a real data layer and a real drift/recommendation loop, see Intended Integrations below.
+The three-stage shape here (objective/key-result setting, then metric decomposition, then measurement and drift) follows the pattern used by the OKR Builder, Metric Tree Builder, and Metrics Framework skills in `mohitagw15856/pm-claude-skills` (1.1k stars on GitHub, one of the more widely-adopted PM-skill collections found researching this space). None of those are tool-connected, they're pure framework logic. This skill borrows the structure and wires it to a real data layer and a real drift/recommendation loop, see Intended Integrations below.
 
 ## Operating Rules (read first)
 

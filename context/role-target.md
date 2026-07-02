@@ -25,6 +25,10 @@
 
 [2-3 honest sentences, specific to this posting, not a repeat of the README's "about me." Should name the real gap too if there is one, e.g. no formal PMO background, and say directly why that's a manageable risk rather than hoping it goes unnoticed.]
 
+## Company voice / format conventions (if known)
+
+[Any stated house style for internal comms this company already uses, e.g. a specific 3P cadence, a newsletter template, a preferred incident-report structure — pulled from the posting, the website, or an actual conversation, not guessed. `internal-comms` reads this field first before asking. Leave blank if unknown; the skill will ask rather than assume a generic template.]
+
 ## Open questions I'd ask in an interview
 
 [Genuine questions this specific posting raises, shows I read it closely rather than mass-applying]
