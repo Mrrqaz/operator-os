@@ -6,7 +6,7 @@ user_invocable: true
 
 # Morning Briefing
 
-One short, scannable brief so the founder or exec doesn't have to reconstruct their own day, or their own open loops, from memory. Five checks, in order: calendar, tasks, goals, a quick urgent scan, then one printed brief. The job isn't to report everything that's happening, it's to catch what's about to become a problem before it does.
+One short, scannable brief so the founder or exec doesn't have to reconstruct their own day, or their own open loops, from memory. Five checks, in order: calendar, tasks, goals, a quick urgent scan, then one printed brief. Its job is to catch what's about to become a problem before it does, while there's still time to head it off.
 
 ## Operating Rules (read first)
 
@@ -40,7 +40,7 @@ There's no live calendar integration in this system (see Intended Integrations a
 - Read every file in `context/people/`. Collect each person's `Open items` section.
 - **Cross-check the two sources against each other.** An item that's `Open` in a person's file but `Closed` in the decisions log (or the reverse) means one of the files didn't get updated after the fact. Flag it as a memory-hygiene gap, separate from a live risk.
 - Sort what's left into **overdue** (past a stated date), **due today or this week**, and **open, no date given**.
-- **Check staleness by cadence.** For each person in `context/people/`, compare their most recent `Interaction log` date against today, relative to the cadence stated in that file's `Relationship` line (daily, weekly, monthly, ad hoc). Rough judgment, not a fixed rule: a daily relationship quiet for several days is stale, weekly past ~10 days, monthly past ~6 weeks.
+- **Check staleness by cadence.** For each person in `context/people/`, compare their most recent `Interaction log` date against today, relative to the cadence stated in that file's `Relationship` line (daily, weekly, monthly, ad hoc). The thresholds are owned by `relationship-crm`'s tier table, use those, don't re-judge them here: daily-cadence stale past 14 days, weekly past 30, monthly past 60. Quiet inside the threshold isn't stale, but a missed sync against a stated cadence is still worth a line if something's riding on that person.
 - **The sharpest signal is an open item sitting on a stale contact.** Someone is waiting on something and has gone quiet. Rank these above a plain overdue item with no relationship signal attached. Don't flag someone as stale just because their file is untouched, if there's no open item and the cadence is naturally long, quiet is normal.
 
 ## Step 4: Check Goal Alignment
@@ -83,26 +83,28 @@ Rank within each section by risk, not by which file it came from. Compress a sec
 
 ## Worked Example (Nova Loop, fictional)
 
-Say today is Wed 2026-07-02. No calendar was pasted in this morning. Reading the seeded example files:
+Say today is Thu 2026-07-02. No calendar was pasted in this morning. Reading the seeded example files:
 
 ```
-Morning brief — Wed 2026-07-02
+Morning brief — Thu 2026-07-02
 
 CALENDAR
 No calendar provided today. If Sam or Priya turn up on today's calendar,
 move the TASKS items below ahead of that meeting.
 
 TASKS
-1. Priya's Q2 KPI drift writeup is due before Friday's board prep, and the
-   support-ticket-spike root cause it depends on is still open (logged
-   2026-06-24). If the root cause isn't back yet, the writeup can't be
-   clean, check where that stands before Friday creeps up.
+1. Priya's Q2 KPI drift writeup was due before last Friday's board prep
+   (2026-06-26), and the support-ticket-spike root cause it depends on is
+   still open (logged 2026-06-24). Both slipped past that date, and the
+   writeup can't be clean until the root cause is back. Chase the root
+   cause first.
 2. The relaunch-date decision (Sam's item, logged 2026-06-22) was due "by
    end of week." That week has passed, this is now overdue, not just open.
-3. Stale, open item attached: Sam Okafor, last logged contact 2026-06-22
-   (10 days), weekly-sync relationship. He's the one who flagged the
-   support/CS gap the relaunch decision is stuck on. Worth a direct
-   check-in today, not just a wait.
+3. Missed cadence, open item attached: Sam Okafor, last logged contact
+   2026-06-22 (10 days against a weekly sync, so a sync got skipped; not
+   stale by relationship-crm's 30-day tier, but he's holding what item 2
+   is stuck on). He's the one who flagged the support/CS gap. Worth a
+   direct check-in today, not just a wait.
 4. Memory-hygiene gap: Elliot's people file still lists the runway-scenario
    doc as an open item (logged 2026-06-18), but the decisions log shows it
    was delivered and closed on 2026-06-24. Close it in his file so it
@@ -111,8 +113,8 @@ TASKS
 GOALS
 Priya's KPI writeup and the relaunch decision both sit on standing
 priority #2 (never let a special project stall silently) and #3 (keep the
-relationship map current). Both are trending toward stalling, not there
-yet.
+relationship map current). Both are now past their stated dates, that's
+drift already landed, not approaching.
 
 URGENT
 Nothing surfaced. No live inbox integration in this demo, and nothing in

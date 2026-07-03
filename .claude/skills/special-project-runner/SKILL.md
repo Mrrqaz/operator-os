@@ -84,7 +84,7 @@ At every check-in:
 
 ## Step 4: Surface gaps, don't wait to be asked
 
-The default failure mode in a cross-functional project isn't a missed task, it's a team finding out too late. So the standing question at every check-in is: **has [team] actually confirmed they know, or am I assuming they do because someone competent is running their part, or because the RACI says they're Consulted?** A RACI assignment is not confirmation any more than confidence from a different team is. If the answer is Assumed, go find out before the next update, not after.
+The default failure mode in a cross-functional project is a team finding out too late. Tasks getting tracked and checked off doesn't prevent it. So the standing question at every check-in is: **has [team] actually confirmed they know, or am I assuming they do because someone competent is running their part, or because the RACI says they're Consulted?** A RACI assignment is not confirmation any more than confidence from a different team is. If the answer is Assumed, go find out before the next update, not after.
 
 ## Step 5: Close out
 

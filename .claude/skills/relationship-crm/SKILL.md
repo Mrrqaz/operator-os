@@ -105,16 +105,18 @@ Report both signals together per person, don't just say "stale." Say what's stal
 
 ## Worked Examples
 
-**Logging a call from raw notes:** User pastes rough notes from a call with Priya. I read `priya-nakamura-ceo.md`, see the last log entry was about the support-ticket spike, add a new top entry for today's call, check whether the support-ticket root-cause item in Open items got closed out (strike it through if so), and leave Standing context alone unless she said something that changes her actual priorities, not just today's topic.
+**Logging a call from raw notes:** User pastes rough notes from a call with Priya. I read `priya-nakamura-ceo.md`, see the last log entry was about the support-ticket spike, add a new top entry for today's call, check whether either of her Open items (the board deck, the Q2 KPI writeup) got closed out (strike it through if so), and leave Standing context alone unless she said something that changes her actual priorities, not just today's topic.
 
 **New stakeholder appears:** Notes mention "looped in our new VP Sales, Dana Reyes, she'll own the pipeline number going forward." No file exists. I create `dana-reyes-vp-sales.md`, mark Communication style as `Not yet established.`, log the one interaction that introduced her, and tell the user a new file was created so they can add her to the people README if it should be tracked long-term.
 
-**`stale` mode output:**
+**`stale` mode output, run on a hypothetical 2026-07-10 with nothing logged since the seeded data:**
 ```
-Priya Nakamura (CEO, Tier 1 / daily, 14-day threshold) — last log entry 2026-06-15, 17 days ago. Flag: 3 days past threshold.
-Open item from Priya (2026-06-15, support-ticket root cause) — no log entry references it closing out. Flag: unresolved or resolved-but-unlogged.
+Priya Nakamura (CEO, Tier 1 / daily, 14-day threshold) — last log entry 2026-06-24, 16 days ago. Flag: 2 days past threshold.
+Open items from Priya (2026-06-20 board deck, 2026-06-24 Q2 KPI writeup) — both past 10 business days, no log entry references either closing out. Flag: unresolved or resolved-but-unlogged.
+Sam Okafor (Head of Product, Tier 2 / weekly, 30-day threshold) — clean on cadence (18 days), but the relaunch-date item (2026-06-22) trips the open-item signal. Flag: unresolved or resolved-but-unlogged.
+Elliot Marsh (Tier 3 / monthly, 60-day threshold) — clean on cadence (22 days), but the runway-scenario item (2026-06-18) is still open in his file while the decisions log shows it delivered 2026-06-24. Flag: resolved-but-unlogged, close it in his file.
 ```
-Elliot Marsh (Tier 3 / monthly, last contact 53 days ago against a 60-day threshold) doesn't show up here, he's not stale yet. He'd appear in `all` mode with a clean status line instead.
+Notice cadence alone only catches Priya, it's Signal 2, the open items, doing most of the work at this date. And Elliot's line is the same file-vs-log mismatch `morning-briefing`'s memory-hygiene check catches from its own angle: two skills, one gap, either one surfaces it.
 
 **`<name>` mode:** User asks "how's it looking with Dana before I see her tomorrow." I read only `dana-reyes-vp-sales.md`, check her tier against today's date, check her open items, report both, and don't touch any other file.
 

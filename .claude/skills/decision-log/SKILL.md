@@ -8,7 +8,7 @@ user_invocable: true
 
 Write down decisions and the reasoning behind them the moment they're made, so the founder/exec, a new stakeholder, or future me never has to re-litigate something that was already settled. Append-only. Never edit a past entry.
 
-The part that makes this more than a running list: before anything new gets written, the log gets searched for related prior decisions on the same topic, stakeholder, or project, and if one turns up, it gets surfaced to the user before a single word is drafted. The point isn't just to remember decisions, it's to stop the founder from quietly re-deciding, contradicting, or flip-flopping on something already settled, without ever noticing they're doing it.
+The part that makes this more than a running list: before anything new gets written, the log gets searched for related prior decisions on the same topic, stakeholder, or project, and if one turns up, it gets surfaced to the user before a single word is drafted. Beyond remembering decisions, this exists to stop the founder from quietly re-deciding, contradicting, or flip-flopping on something already settled, without ever noticing they're doing it.
 
 ## Operating Rules (read first)
 
