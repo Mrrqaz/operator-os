@@ -13,7 +13,7 @@
 
 ## Open items
 
-- ~~[2026-06-18] Asked for a running view of runway under two scenarios (current burn vs planned hires)~~ resolved 2026-06-24
+- [2026-06-18] Asked for a running view of runway under two scenarios (current burn vs planned hires)
 
 ## Interaction log
 

@@ -6,7 +6,7 @@ user_invocable: true
 
 # Stakeholder Update
 
-Turn what actually happened into an update shaped for the person reading it, not a generic status report. A board deck, an investor email, and an internal leadership update are three different documents, even when they cover the same two weeks and the same facts. The first question is never "what happened," it's "who is this for, and what shape does that person actually need."
+Turn what actually happened into an update shaped for the person reading it, not a generic status report. A board deck, an investor email, and an internal leadership update are three different documents, even when they cover the same two weeks and the same facts. The first question to answer is who this is for and what shape that person actually needs, and that comes before "what happened."
 
 ## Operating Rules (read first)
 
@@ -19,7 +19,7 @@ Turn what actually happened into an update shaped for the person reading it, not
 
 ## Step 1: Identify the audience and read their file
 
-Check `context/role-target.md` for who I'm working for, then figure out who this specific update is for (named directly, or implied — "prep the board update" means the board / lead investor). If it's a board or investor audience, also pin down which document this actually is: a **board deck** for a live board meeting, or an **investor email** written for someone reading it async on their own time. Those are different jobs even inside the same bucket — ask if it isn't obvious.
+Check `context/role-target.md` for who I'm working for, then figure out who this specific update is for (named directly, or implied, as when "prep the board update" means the board / lead investor). If it's a board or investor audience, also pin down which document this actually is: a **board deck** for a live board meeting, or an **investor email** written for someone reading it async on their own time. Those are different jobs even inside the same bucket, so ask if it isn't obvious.
 
 Read `context/people/<name>.md` in full and pull out:
 
@@ -34,7 +34,7 @@ If there's no file for the named audience, stop and ask who this is functionally
 
 Read `context/decisions-log.md` in full and pull every entry relevant to the update window (since the last update, or a given date range). Read `context/goals.md` so progress gets framed against stated priorities, not just listed chronologically.
 
-Cross-reference the log against the stakeholder's open items. If something they asked for has since been delivered, name that closed loop explicitly — don't leave it implied.
+Cross-reference the log against the stakeholder's open items. If something they asked for has since been delivered, name that closed loop explicitly instead of leaving it implied.
 
 ## Step 3: Pick the shape
 
@@ -42,16 +42,16 @@ Three shapes, named explicitly so this doesn't turn into a generic "update" temp
 
 **Board deck — Sequoia's 3-hour board-meeting framework:**
 Treat the board's time as scarce. Materials get sent ahead so the room debates instead of reads. The meeting itself is structured, and the deck should be built to match it:
-1. Pre-read package, sent days ahead — no live board time spent presenting numbers people could've read.
-2. A short context-setting block (roughly the meeting's first 30 minutes) — headline metrics, what changed, stated fast.
-3. The bulk of the meeting (the remaining two-plus hours) goes to 2-3 real discussion topics — the things that actually need the board's judgment, not a status readout. Each of those topics gets its own **SCQA** brief: **Situation** (stable context before anything changed), **Complication** (what changed that makes this worth board time), **Question** (the question the complication forces), **Answer** (the recommendation or the decision being asked of the board).
-4. Remaining time — other business, exec session if needed.
+1. Pre-read package, sent days ahead. No live board time gets spent presenting numbers people could've read.
+2. A short context-setting block (roughly the meeting's first 30 minutes): headline metrics, what changed, stated fast.
+3. The bulk of the meeting (the remaining two-plus hours) goes to 2-3 real discussion topics, the things that actually need the board's judgment, not a status readout. Each of those topics gets its own **SCQA** brief: **Situation** (stable context before anything changed), **Complication** (what changed that makes this worth board time), **Question** (the question the complication forces), **Answer** (the recommendation or the decision being asked of the board).
+4. Remaining time: other business, exec session if needed.
 
-Don't SCQA a topic that's just a status update — that's what the pre-read metrics block is for. SCQA is reserved for the topics that need real discussion.
+Don't SCQA a topic that's just a status update. That's what the pre-read metrics block is for. SCQA is reserved for the topics that need real discussion.
 
 **Investor email — 5-15 format:**
 Written for a reader on their own time, not in a room. The standard: readable in 5 minutes, writable in 15. That constraint forces prioritization instead of a comprehensive report nobody finishes.
-1. Headline metrics — the handful this specific investor tracks, not everything measurable
+1. Headline metrics: the handful this specific investor tracks, not everything measurable
 2. What changed since the last update, in a few lines, not paragraphs
 3. Risks and open items, named plainly, not buried
 4. What's actually being asked of them, if anything, or "nothing needed this cycle"
@@ -66,15 +66,15 @@ Across all three: a stakeholder's stated preference overrides their bucket's def
 
 ## Step 4: Draft
 
-Write the update in the chosen shape, sourced only from Steps 1 and 2. Every claim ties to a specific decisions-log entry or a real number from the source material. No number on hand means `[NEED: what's missing]` in the draft, not a filled-in guess. Match length and reading level to what the stakeholder's file implies — a founder who wants short briefs gets a short brief, not a memo.
+Write the update in the chosen shape, sourced only from Steps 1 and 2. Every claim ties to a specific decisions-log entry or a real number from the source material. No number on hand means `[NEED: what's missing]` in the draft, not a filled-in guess. Match length and reading level to what the stakeholder's file implies. A founder who wants short briefs gets a short brief, not a memo.
 
 ## Step 5: Self-check against their stated preferences
 
-Before presenting anything, reread the "cares about" and "dislikes" lines from Step 1 and check the draft against each one by name. This is the step that catches a buried risk or a vanity metric leading the doc before the founder ever sees it — do it explicitly, don't assume the draft is fine because it "reads well."
+Before presenting anything, reread the "cares about" and "dislikes" lines from Step 1 and check the draft against each one by name. This is the step that catches a buried risk or a vanity metric leading the doc before the founder ever sees it, so do it explicitly and don't assume the draft is fine because it "reads well."
 
 ## Step 6: Present for approval
 
-Hand over the draft plus the Step 5 check to the founder/exec. Never send or publish directly — this is always a draft for their review first. Flag anything sourced from a stale or still-open decisions-log entry so they can decide if it's actually ready to go out.
+Hand over the draft plus the Step 5 check to the founder/exec. Never send or publish directly. This is always a draft for their review first. Flag anything sourced from a stale or still-open decisions-log entry so they can decide if it's actually ready to go out.
 
 ## Intended Integrations
 
@@ -84,7 +84,7 @@ This repo runs on flat files (`context/decisions-log.md`, `context/people/`) so 
 - **Investor emails** — compose the 5-15 draft here, paste into a **Google Doc** for a shared review pass if the founder wants a second set of eyes, then send once approved through whatever channel that investor relationship actually uses.
 - **Internal leadership updates** — sync the narrative-first draft into **Notion**, since that's usually where internal readouts already live and get commented on, rather than staying trapped in a Markdown file only the founder opens.
 
-The skill still drafts and self-checks locally first, every time. Approval happens before anything reaches Slides, Docs, or Notion — the integration point is where an already-approved draft ships, not where it gets written.
+The skill still drafts and self-checks locally first, every time. Approval happens before anything reaches Slides, Docs, or Notion. The integration point is where an already-approved draft ships, not where it gets written.
 
 ## Worked Example: Investor Update for Elliot Marsh (Nova Loop) — 5-15 format
 
@@ -105,22 +105,22 @@ What changed since last update
   2026-06-18. Closed 2026-06-24.
 
 Risks — surfaced now, not smoothed over
-- Support ticket volume up 30% since the relaunch. Root cause not yet confirmed —
-  could be a launch-comms gap, not a capacity problem. Holding off on additional
+- Support ticket volume up 30% since the relaunch. Root cause not yet confirmed.
+  Could be a launch-comms gap, not a capacity problem. Holding off on additional
   support hires until that's clear. Recommendation due before Friday's board prep.
 - Relaunch date is under review. Support/CS wasn't looped into launch-week comms
-  planning. Not resolved — Priya deciding by end of week.
+  planning. Not resolved yet, Priya deciding by end of week.
 
 Asking of you
 - Nothing needs a decision from you this cycle. Both items above are flagged now,
   before the call, not after.
 ```
 
-**Self-check against Elliot's file:** numbers first, narrative second — yes, the numbers block leads. Dislikes surprises more than bad news — both open risks are named here, not held until resolved and sprung on him live. Cares about burn/NRR over vanity metrics — only burn/NRR-relevant lines made the headline block. Burn rate and NRR actuals aren't logged anywhere this cycle — flagged as `[NEED]` rather than filled in with a plausible-looking number.
+**Self-check against Elliot's file:** numbers first, narrative second, yes, the numbers block leads. Dislikes surprises more than bad news, and both open risks are named here, not held until resolved and sprung on him live. Cares about burn/NRR over vanity metrics, so only burn/NRR-relevant lines made the headline block. Burn rate and NRR actuals aren't logged anywhere this cycle, flagged as `[NEED]` rather than filled in with a plausible-looking number.
 
 **If this were a board-meeting deck instead** of an async email, the ticket-spike risk above would become its own SCQA discussion brief rather than a bullet:
 - **Situation:** Support ticket volume was stable through the relaunch window.
-- **Complication:** Volume is up 30% since relaunch, and root cause isn't confirmed — could be a comms gap, could be a real capacity problem.
+- **Complication:** Volume is up 30% since relaunch, and root cause isn't confirmed. Could be a comms gap, could be a real capacity problem.
 - **Question:** Do we approve support hires now, or wait for the root-cause read?
 - **Answer:** Hold on hires until the root-cause finding lands, due before this meeting's prep cutoff. [NEED: confirm the finding is actually in hand before the meeting, not still pending.]
 

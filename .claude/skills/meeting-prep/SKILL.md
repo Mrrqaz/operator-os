@@ -25,7 +25,7 @@ This repo runs on local files, not live connectors, so today both modes read and
 
 - **Source of truth for people and decisions** stays `context/people/*.md` and `context/decisions-log.md`, or a Notion MCP mirroring the same schema (one page per stakeholder, one database for decisions) if the founder already runs their second brain in Notion. Local files win over Notion if the two ever disagreed, there's no Notion connection here to disagree with yet.
 - **Schedule pull (Prep, Step P1)** would come from a Google Calendar MCP, answering who's in the room and when directly instead of asking the user to type it in.
-- **Transcript source (Debrief, Step D1)** would come from Granola, Fireflies.ai, or Otter.ai rather than asking the user to recount the meeting from memory. Worth being honest about: no skill in this repo, or in the two reference implementations this one is built from, wires a transcript tool live end to end yet. Naming the intent, and the specific tools, is the differentiator over leaving debrief input as "paste your notes."
+- **Transcript source (Debrief, Step D1)** would come from Granola, Fireflies.ai, or Otter.ai rather than asking the user to recount the meeting from memory. Worth being honest about: no skill in this repo, or in the public meeting-prep patterns this one draws from, wires a transcript tool live end to end yet. Naming the intent, and the specific tools, is the differentiator over leaving debrief input as "paste your notes."
 
 ## Mode: Prep (Before the Meeting)
 

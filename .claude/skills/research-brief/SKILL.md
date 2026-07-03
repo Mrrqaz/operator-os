@@ -14,7 +14,7 @@ This borrows its two-mode shape from the `competitive-intelligence-monitor` and 
 
 - **Name the mode out loud before starting.** Weekly Digest (scheduled, every tracked competitor) or Ad-Hoc (one event, right now). Don't blend them, an ad-hoc ping doesn't wait for the weekly cycle and the weekly digest doesn't skip a competitor because an ad-hoc brief already touched them once.
 - **`context/goals.md` is the filter, not a footnote.** A signal only earns space in the brief once it's judged against a Standing priority or a specific stakeholder's stated concern (`context/people/`). "Competitor X shipped Y" is not a finding until it says what Y means for what Priya-equivalent is optimizing for this week.
-- **Five categories, nothing else.** Product/UX, pricing, hiring, partnerships, messaging. If a piece of news doesn't fit one of those, it's not a tracked signal, it's trivia.
+- **Five categories, nothing else.** Product/UX, pricing, hiring, partnerships, messaging. If a piece of news doesn't fit one of those, treat it as trivia rather than a tracked signal.
 - **Every High-threat signal needs a named owner and a concrete action before it's done.** "Just monitor" is explicitly disallowed as the response to a High. Medium or Low can land on "monitor" if that's genuinely the right call, but say so and name what would upgrade it.
 - **Diff-mode after the first run, weekly only.** The first-ever Weekly Digest is a full baseline sweep. Every run after only reports what's new or changed since the last logged digest, not the whole landscape again.
 - **Hard 300-word cap on the Weekly Digest.** Ad-Hoc has no cap, it's one event and the founder is reading it in real time.
@@ -34,7 +34,7 @@ A scheduled sweep, or asked for as "this week's competitor update," is Weekly Di
 
 **Step 3: Baseline vs. diff.** Read `context/competitive-intel-log.md`. Empty file means this is the baseline sweep, report everything found. A prior entry exists means report only what's new or changed since that entry, not a re-statement of the whole landscape.
 
-**Step 4: Score every candidate signal.** Rate High/Medium/Low against the rubric below, and name the specific `goals.md` priority or `context/people/` concern it ties to. A signal with no tie to either doesn't make the cut, it's industry noise, not this founder's business.
+**Step 4: Score every candidate signal.** Rate High/Medium/Low against the rubric below, and name the specific `goals.md` priority or `context/people/` concern it ties to. A signal with no tie to either doesn't make the cut. Without a link to a goal or a stakeholder concern, it's background industry noise the founder doesn't need.
 
 **Step 5: Force owner and action on every High.** Per the Operating Rules, no High reaches the draft without both fields filled in for real.
 
@@ -75,7 +75,7 @@ Running Ad-Hoc mode:
 
 **Step 2 (categorize):** Two categories at once, product/UX (feature parity on the exact thing Nova Loop just relaunched around) and pricing (direct undercut).
 
-**Step 3 (score + tie to goals.md):** **High.** Ties directly to Standing priority 3 ("keep the relationship map current," Sam and Priya are both mid-conversation about relaunch messaging) and to the still-open 2026-06-22 decisions-log entry on the relaunch date. This isn't generic market news, it lands on the exact feature Nova Loop is currently staking the relaunch narrative on, during a week that's already flagged as a live risk.
+**Step 3 (score + tie to goals.md):** **High.** Ties directly to Standing priority 2 ("never let a special project stall silently," the relaunch is that project and this lands square on its centerpiece feature) and to the still-open 2026-06-22 decisions-log entry on the relaunch date. This isn't generic market news, it lands on the exact feature Nova Loop is currently staking the relaunch narrative on, during a week that's already flagged as a live risk.
 
 **Step 4 (owner + action, forced):** Not "keep watching Ridgeline." Recommended action: draft a one-page differentiation note before Priya's next investor touchpoint (real-time cohort updates built into the existing workflow vs. Ridgeline's standalone dashboard, per what's actually on their changelog), and flag to Sam whether the product roadmap should pull forward the next cohort-view improvement rather than let a $10/seat gap sit unanswered. **Owner:** me (draft the note and the roadmap flag), Priya (final call on whether it goes to Sam this week or next).
 
@@ -86,7 +86,7 @@ Running Ad-Hoc mode:
 
 **Category:** Product/UX, Pricing
 **Threat:** High
-**Tied to:** Standing priority 3 (context/goals.md); open relaunch-date decision (decisions-log.md, 2026-06-22)
+**Tied to:** Standing priority 2 (context/goals.md); open relaunch-date decision (decisions-log.md, 2026-06-22)
 **Recommended action:** Draft differentiation one-pager before next investor touchpoint; flag to Sam whether to pull forward the next cohort-view roadmap item.
 **Owner:** Me (draft), Priya (final call on timing/audience)
 **Status:** Open, draft due before Priya's next investor call.
@@ -124,6 +124,6 @@ That's the whole point of the cap and the diff: a two-minute read that only tell
 - Weekly Digest: first run is a full baseline, every run after is diff-only against the last logged entry, and the 300-word cap is enforced by cutting Lows first, never by trimming a High.
 - Ad-Hoc entries get logged immediately, not held for the next weekly cycle, so the diff mode never double-reports them as new.
 - No competitor list means ask, never invent a plausible-looking one.
-- A signal with no real tie to `context/goals.md` or `context/people/` doesn't make either brief, it's market noise, not this founder's business.
+- A signal with no real tie to `context/goals.md` or `context/people/` doesn't make either brief. Untied to a goal or a stakeholder, it's market noise the founder doesn't need.
 - If a fact is unconfirmed (rumored pricing, an unannounced hire), say so plainly in the brief rather than rating it with invented certainty.
 - Nothing produced here goes external without the founder/exec's review and approval first, same as every other skill in this repo.

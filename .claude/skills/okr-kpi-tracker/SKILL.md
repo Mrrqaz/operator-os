@@ -85,7 +85,7 @@ Objective: **Keep post-relaunch support healthy without over-hiring.** Key resul
 
 The flag that would have gone out on 2026-06-24, before Priya defaulted to hiring: *"Support backlog is up to 30hr median, three readings in a row trending up. The tree traces it: 62% of the spike is relaunch-confusion tickets, genuine bug reports are flat at 18%, and support capacity hasn't dropped. This is a comms problem, not a capacity problem, hiring would patch the wrong branch and be expensive to reverse. Recommend a same-day FAQ/in-app note addressing the relaunch change before Friday's board prep, then re-check the tree in 48 hours."* That's the decision later logged in `context/decisions-log.md` under 2026-06-24, and it's a stronger flag than "tickets are up 30%" precisely because the tree pointed at the branch that moved.
 
-The burn rate and NRR rows aren't drifting today, but they stay on the dashboard because Elliot has said he cares about them over vanity growth (`context/people/elliot-marsh-investor.md`). An OKR/KPI dashboard for this job isn't just "what's broken," it's also "what this specific stakeholder will ask about regardless," so the founder never gets caught flat in a board call.
+The burn rate and NRR rows aren't drifting today, but they stay on the dashboard because Elliot has said he cares about them over vanity growth (`context/people/elliot-marsh-investor.md`). An OKR/KPI dashboard for this job tracks two things: what's broken, and what this specific stakeholder will ask about regardless, so the founder never gets caught flat in a board call.
 
 ## Rules
 
