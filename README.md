@@ -37,7 +37,8 @@ flowchart TD
 
     WR[weekly-review]
     CTX[("context/ — people, decisions-log, goals")]
-    GATE{{"Founder / exec approval"}}
+    PB[proof-boundary]
+    GATE{{"edge-approval-gate — founder sign-off"}}
 
     CTX --> MB
     IT --> CTX
@@ -51,15 +52,16 @@ flowchart TD
     CTX --> IC
     WR -->|Friday synthesis| CTX
 
-    CTX --> GATE
-    SU --> GATE
-    IC --> GATE
+    SU --> PB
+    IC --> PB
+    OKR --> PB
+    PB -->|truth-status labelled| GATE
     GATE --> SEND["Sends, decks, updates, decisions"]
 ```
 
 ## What's inside
 
-A Claude Code project: a `CLAUDE.md` identity file, a `context/` layer for goals, people, and decisions, and 11 skills that do the actual work.
+A Claude Code project: a `CLAUDE.md` identity file, a `context/` layer for goals, people, and decisions, and 13 skills that do the actual work.
 
 **Daily operating:**
 
@@ -92,6 +94,15 @@ A Claude Code project: a `CLAUDE.md` identity file, a `context/` layer for goals
 | `research-brief` | A weekly competitive digest plus same-day reaction when something happens now |
 | `internal-comms` | Status reports, newsletters, incident write-ups, in whatever format the company already uses |
 
+**Governance and control:**
+
+These two are the reason nothing reaches a stakeholder soft or unsigned. They sit under every reporting and comms skill, not beside them.
+
+| Skill | What it does |
+|---|---|
+| `proof-boundary` | Stamps every figure measured / projected / assumed / drafted before it reaches the founder, so a projection is never read as a result and a gap is never filled with a plausible guess |
+| `edge-approval-gate` | The unconditional hold in front of anything that leaves the building under the founder's name or commits them, external sends, founder-signed comms, commitments on their behalf, all wait for explicit sign-off |
+
 ## Why this shape, and where it came from
 
 Most "AI chief of staff" builds I found while researching this are personal inbox-and-calendar tools. Useful, but generic. I built mine around what a Chief of Staff or Founder's Associate actually does: run special projects, prep the founder or the board, keep cross-functional priorities aligned, hold institutional memory so nothing falls through when things move fast.
@@ -104,6 +115,7 @@ I didn't invent these skills in a vacuum. Before building, I mapped the real tas
 - `special-project-runner`'s RACI and RAG-status structure comes from `mohitagw15856/pm-claude-skills`, the same library `okr-kpi-tracker` and `research-brief` draw from, specifically its `raci-matrix` and `project-status-report` skills.
 - `stakeholder-update` uses named investor-relations frameworks (Sequoia's board-meeting format, the "5-15" investor-update format) instead of a generic "write an update" prompt.
 - `internal-comms` is adapted from Anthropic's own official internal-comms skill.
+- `proof-boundary` and `edge-approval-gate` are the two control primitives I carry across every operating system I build, the truth-status label and the human-in-the-loop hold. The hold is adapted from HumanLayer's human-in-the-loop approval pattern and the Claude Code `PreToolUse` gate; the never-present-a-projection-as-a-result rule is my own. They are the same two controls that sit under my lead-gen system repos, pointed here at a founder's office.
 
 That's the actual research discipline behind this repo: know the job, know what's already been built for it, take the best version, don't rebuild what's already solved.
 

@@ -26,6 +26,15 @@ Not general admin. A bounded set of responsibilities:
 5. **Never overwrite history.** When a decision changes or a person's status updates, append a new dated entry. Don't edit past entries out.
 6. **Say when you don't know.** If a briefing or update would require guessing a fact, ask instead of filling the gap with something plausible-sounding.
 
+## The control layer
+
+Two skills exist only to enforce the principles above, and they sit under every reporting and comms skill rather than beside them:
+
+- `proof-boundary` is principle 6 made mechanical: it stamps every figure that reaches the founder with its truth-status (measured / projected / assumed / drafted), so a projection is never read as a result and a missing number is never filled with a guess.
+- `edge-approval-gate` is principle 2 made mechanical: it is the unconditional hold in front of anything that leaves the building under the founder's name or commits them. Draft freely inside the job; everything at the edge waits for sign-off.
+
+Neither drafts or decides anything. They label and they hold. That separation is deliberate: the skill that writes an update is not the skill that vouches for its numbers, and neither is the skill that lets it out the door.
+
 ## File map
 
 - `context/role-target.md` — who I'm working for right now (swapped per engagement)
